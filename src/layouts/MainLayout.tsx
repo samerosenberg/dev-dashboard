@@ -1,5 +1,4 @@
 import Configuration from "@/components/Configuration";
-import "../App.css";
 import Header from "../components/Header";
 import CardLayout from "@/layouts/CardLayout";
 import { useState } from "react";
