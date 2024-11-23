@@ -1,19 +1,24 @@
 import React from "react";
-import HeaderSettings from "../assets/header-settings.svg?react";
-import { Button } from "./ui/button";
-import { ModeToggle } from "./ModeToggle";
+import ModeToggle from "./ModeToggle";
+import Settings from "./Settings";
+import AddButton from "./AddButton";
 
 type Props = {};
 
-export default function Header({}: Props) {
+function Header({}: Props) {
     return (
         <div className="flex h-20 w-screen justify-end">
-            <span className="p-1 m-5">
+            <span className="p-1 ml-5 my-5 mr-auto">
+                <AddButton />
+            </span>
+            <span className="p-1 mr-2.5 my-5">
                 <ModeToggle />
             </span>
-            <Button variant="ghost" className="p-1 m-5" size="icon">
-                <HeaderSettings className="h-8 w-8 stroke-foreground stroke-2" />
-            </Button>
+            <span className="p-1 ml-2.5 my-5 mr-5">
+                <Settings />
+            </span>
         </div>
     );
 }
+
+export default Header;

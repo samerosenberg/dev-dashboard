@@ -1,12 +1,13 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Layout, Layouts } from "react-grid-layout";
 import { v4 as uuidv4 } from "uuid";
+import { addCardInfo, removeCardInfo } from "./cardInfoSlice";
 
-interface CardState {
+interface CardsState {
     cards: Layouts;
 }
 
-const initialState: CardState = {
+const initialState: CardsState = {
     cards: {
         lg: Array.from({ length: 3 }, (_, i) => ({
             i: uuidv4(),
